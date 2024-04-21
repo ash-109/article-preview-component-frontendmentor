@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 :root {
   /* COLORS  */
@@ -8,14 +8,134 @@
   --Light-Grayish-Blue: hsl(210, 46%, 95%);
 
   /* FONT */
---body-font : 'Manrope', Trebuchet;
+  --body-font: "Manrope", Trebuchet;
+}
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--Light-Grayish-Blue);
+  font-family: var(--body-font);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+article {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  height: 240px;
+}
+.product_image {
+  width: 40%;
+  height: 240px;
+  background-image: url(../images/drawers.jpg);
+  background-position: 15%;
+  background-size: cover;
+  border-radius: 10px  0 0 10px ;
+}
+
+.buyer_review {
+  background: white;
+  width: 65%;
+  padding: 10px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  position: relative;
+  border-radius:  0 10px 10px 0;
 
 }
-body{
-    padding: 0;
-    margin: 0;
-    background-color: var(--Light-Grayish-Blue);
-    font-family: var(--body-font);
-    min-height: 100vh;
-    width: 100%;
+.buyer_review h1 {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 1.1rem;
 }
+.buyer_review p {
+  color: var(--Desaturated-Dark-Blue);
+  font-size: 0.7rem;
+  line-height: 1.1rem;
+}
+.div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buyer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.buyer img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+#share_icon {
+  background: var(--Light-Grayish-Blue);
+  padding: 10px;
+  border-radius: 50%;
+}
+.buyer_info {
+  line-height: 1rem;
+}
+.buyer_info p:nth-child(1) {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-weight: 700;
+}
+
+
+#share-pop-up {
+  position: absolute;
+  top: 110px;
+  left: 53%;
+  background: var(--Very-Dark-Grayish-Blue);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 14px;
+  z-index: 10;
+}
+#share-pop-up img{
+  cursor: pointer;
+
+}
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+#share_icon:hover{
+  cursor: pointer;
+}
+
+#share-pop-up p {
+  color: var(--Grayish-Blue);
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+#share-pop-up::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--Very-Dark-Grayish-Blue);
+}
+
+
