@@ -80,11 +80,7 @@ article {
   height: 34px;
   border-radius: 50%;
 }
-#share_icon {
-  background: var(--Light-Grayish-Blue);
-  padding: 10px;
-  border-radius: 50%;
-}
+
 .buyer_info {
   line-height: 1rem;
 }
@@ -92,14 +88,34 @@ article {
   color: var(--Very-Dark-Grayish-Blue);
   font-weight: 700;
 }
+.share{
+  background: var(--Light-Grayish-Blue);
+  padding: 10px;
+border-radius: 50%;
+display: inline-block;
+cursor: pointer;
+position: relative;
+
+}
+.share svg{
+  fill: #6E8098;
+
+}
+.share:hover{
+  background: #6E8098;
+}
+.share:hover svg{
+  fill: #fff;
+}
+
 
 
 #share-pop-up {
   position: absolute;
-  top: 110px;
-  left: 53%;
+  top:-70px;
+  left: -100px;
   background: var(--Very-Dark-Grayish-Blue);
-  padding: 15px 40px;
+  padding: 15px 30px;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -107,10 +123,7 @@ article {
   border-radius: 14px;
   z-index: 10;
 }
-#share-pop-up img{
-  cursor: pointer;
 
-}
 .hidden {
   visibility: hidden;
 }
@@ -118,9 +131,7 @@ article {
 .visible {
   visibility: visible;
 }
-#share_icon:hover{
-  cursor: pointer;
-}
+
 
 #share-pop-up p {
   color: var(--Grayish-Blue);
@@ -130,7 +141,7 @@ article {
 #share-pop-up::before {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -9px;
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
