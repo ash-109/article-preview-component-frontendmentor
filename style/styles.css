@@ -73,6 +73,7 @@ article {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  outline: 1px red solid;
 }
 .buyer {
   display: flex;
@@ -97,25 +98,23 @@ article {
   padding: 10px;
   padding-left: 12px;
   border-radius: 50%;
-  position: relative;
 }
 .share svg {
   fill: #6e8098;
 }
 .share:hover {
   background: #6e8098;
-  cursor: pointer;  
-
+  cursor: pointer;
+  outline: 1px solid var(--Very-Dark-Grayish-Blue);
 }
 .share:hover svg {
   fill: #fff;
-
 }
 
 #share-pop-up {
   position: absolute;
-  top: -70px;
-  left: -100px;
+  top: 110px;
+  right: -60px;
   background: var(--Very-Dark-Grayish-Blue);
   padding: 15px 30px;
   display: flex;
@@ -126,7 +125,9 @@ article {
   z-index: 10;
   cursor: auto;
 }
-
+#share_icon_logo {
+  z-index: 50;
+}
 .hidden {
   visibility: hidden;
 }
@@ -164,18 +165,36 @@ article {
 .attribution a:hover {
   color: var(--Very-Dark-Grayish-Blue);
 }
-@media screen and (max-width:700px) {
-  article{ height: auto;
+@media screen and (max-width: 700px) {
+  article {
+    height: auto;
     flex-direction: column;
     min-width: 50%;
-
   }
-  .product_image{
+  .product_image {
     width: 100%;
     border-radius: 10px 10px 0 0;
   }
-  .buyer_review{
+  .buyer_review {
     width: 100%;
+    padding: 30px 25px 15px;
+    gap: 1rem;
   }
-  
+  .div {
+    margin: 0px;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+
+  #share-pop-up {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+    background: #000;
+  }
 }
