@@ -229,6 +229,8 @@ display: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 35px;
+  height: 33px;
 }
  #share_icon_mobile{
   display: block;
