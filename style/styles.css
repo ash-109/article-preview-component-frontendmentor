@@ -39,6 +39,8 @@ article {
   align-items: center;
   box-shadow: 5px 1px 34px var(--Grayish-Blue);
   border-radius: 10px;
+  position: relative;
+
 }
 .product_image {
   width: 40%;
@@ -57,7 +59,6 @@ article {
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
-  position: relative;
   border-radius: 0 10px 10px 0;
 }
 .buyer_review h1 {
@@ -73,7 +74,6 @@ article {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  outline: 1px red solid;
 }
 .buyer {
   display: flex;
@@ -102,15 +102,22 @@ article {
 .share svg {
   fill: #6e8098;
 }
+.share_mobile{
+display:  none;
+}
 .share:hover {
   background: #6e8098;
   cursor: pointer;
-  outline: 1px solid var(--Very-Dark-Grayish-Blue);
 }
 .share:hover svg {
   fill: #fff;
 }
-
+.sharediv{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;    
+  gap: 1rem;
+}
 #share-pop-up {
   position: absolute;
   top: 110px;
@@ -125,8 +132,8 @@ article {
   z-index: 10;
   cursor: auto;
 }
-#share_icon_logo {
-  z-index: 50;
+.socials img{
+margin-right: 0.8rem;
 }
 .hidden {
   visibility: hidden;
@@ -154,7 +161,9 @@ article {
 #share-pop-up:hover img {
   cursor: pointer;
 }
-
+#share_icon_mobile{
+display: none;
+}
 .attribution {
   font-size: 1rem;
 }
@@ -170,6 +179,8 @@ article {
     height: auto;
     flex-direction: column;
     min-width: 50%;
+    overflow: hidden;
+
   }
   .product_image {
     width: 100%;
@@ -179,22 +190,63 @@ article {
     width: 100%;
     padding: 30px 25px 15px;
     gap: 1rem;
+
   }
   .div {
     margin: 0px;
     padding: 0;
     width: 100%;
-    left: 0;
-    bottom: 0;
+    
   }
 
+  .sharediv{
+width: 60%;
+    align-items: center;
+  }
+  
   #share-pop-up {
     position: absolute;
-    top: 0px;
-    left: 0;
-    margin: 0;
+top: 89%;
+bottom: 0;
     border-radius: 0;
     width: 100%;
-    background: #000;
+    left: 0;
+    background: var(--Very-Dark-Grayish-Blue);
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
   }
+  #share-pop-up::before{
+display: none; 
+ }
+ .share{
+  padding: 8px;
+  padding-left: 10px;
+ }
+ .share_mobile{
+  background: var(--Desaturated-Dark-Blue);
+  padding: 8px;
+      border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+ #share_icon_mobile{
+  display: block;
+  transform: translateX(1px);
+ }
+ #share_icon_mobile:hover{
+  cursor: pointer;
+ }
+ #share_icon_mobile{
+fill:rgb(255, 255, 255);
+
+ }
+
+}
+@media screen and (max-width: 550px) {
+  article {
+    height: auto;
+    min-width: 330px;
+    box-shadow: none;
+
+  }}
