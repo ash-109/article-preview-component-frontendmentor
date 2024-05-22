@@ -121,7 +121,7 @@ display:  none;
 #share-pop-up {
   position: absolute;
   top: 110px;
-  right: -60px;
+  right: -62px;
   background: var(--Very-Dark-Grayish-Blue);
   padding: 15px 30px;
   display: flex;
