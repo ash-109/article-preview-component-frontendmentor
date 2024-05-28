@@ -178,7 +178,7 @@ display: none;
   article {
     height: auto;
     flex-direction: column;
-    min-width: 50%;
+    min-width: 330px;
     overflow: hidden;
 
   }
@@ -191,6 +191,10 @@ display: none;
     padding: 30px 25px 15px;
     gap: 1rem;
 
+  }
+  .buyer_review p{
+    line-height: 1.3rem;
+font-size: 0.9rem;    
   }
   .div {
     margin: 0px;
@@ -247,8 +251,7 @@ fill:rgb(255, 255, 255);
 }
 @media screen and (max-width: 550px) {
   article {
-    height: auto;
-    min-width: 330px;
+    
     box-shadow: none;
 
   }}
